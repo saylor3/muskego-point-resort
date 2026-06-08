@@ -183,8 +183,8 @@ p { max-width: 68ch; }
 }
 
 .logo-tree {
-  width: 22px;
-  height: 28px;
+  width: 26px;
+  height: 22px;
   flex-shrink: 0;
   color: rgba(255,255,255,0.9);
 }

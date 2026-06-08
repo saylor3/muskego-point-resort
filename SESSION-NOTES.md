@@ -1,22 +1,32 @@
 # Muskego Point Resort — Build Status
 
-Last updated: 2026-06-07 (Session 4)
+Last updated: 2026-06-07 (Session 5)
+
+---
+
+## Deployment
+
+- **GitHub:** https://github.com/saylor3/muskego-point-resort
+- **Live site:** https://muskegopointresort.netlify.app (Netlify autodeploy from GitHub)
+- **Target domain:** muskegopoint.com — not yet pointed to Netlify
+- **To deploy future changes:** push to GitHub `main` branch → Netlify autodeploys
 
 ---
 
 ## What's Complete
 
 ### Shared files
-- `css/style.css` — complete. Includes all shared layout, nav, cabin page styles, and lightbox.
+- `css/style.css` — complete. All shared layout, nav, cabin page styles, lightbox.
 - `js/main.js` — complete. Nav, scroll-reveal, gallery thumbnail switcher, drag-to-scroll, lightbox, active nav link detection.
+- `.gitignore` — excludes `node_modules/` and `temporary screenshots/`
 
 ### Top-level pages
-- `index.html` — complete. Horizontal scrolling photo gallery now shows all 10 outdoor photos (5 originals + 5 from `Outdoor and Lake/fwdoutsidepics (1)/`, copied to `images/outdoor/`).
-- `cabins.html` — complete. Small/Medium/Large group heading labels removed; cabins flow without section headers.
-- `fishing.html` — complete. Lake blue dominant accent, hero, stats bar, species cards, 4-photo gallery (2×2), tackle shop callout, CTA. Gallery references `Fishing/` folder directly.
-- `map.html` — complete. ResortMap.gif displayed with 11 amber CSS hotspot dots (percentage-positioned by viewing the actual map image), Fish Cleaning and Office/Store labeled but not linked, cabin index list below as fallback.
-- `about.html` — complete. Top header shows resort name + phone/email/address (no hero). Single history paragraph (Goodwill's only — no Ludlow family, no gray mare sentence, no timeline). 3 confirmed historical photos.
-- `contact.html` — complete. Large amber phone button at top, 3 info cards (phone/email/address), season/policy block, Google Maps embed. No inquiry form.
+- `index.html` — complete. Hero overlay darkened for legibility. Gallery strip shows 5 unique outdoor photos in order: Store → Volleyball Court → Beach → Boathouse → IMG_3743. History teaser section removed entirely.
+- `cabins.html` — complete. Map teaser section removed. Cabins flow without size group headers.
+- `fishing.html` — complete. Lake blue dominant accent, hero, stats bar, species cards, 4-photo gallery (2×2), tackle shop callout, CTA.
+- `about.html` — complete. Single history paragraph (Goodwill's origin only). 3 historical photos.
+- `contact.html` — complete. Large amber phone button at top, info cards, season/policy block, Google Maps embed. "Reservations & Inquiries" eyebrow removed. "No online booking" phrasing removed from both locations.
+- `map.html` — **DELETED.** Map page removed from the site entirely. All nav links and footer links to map.html removed from all 16 pages.
 
 ### All 11 cabin pages — complete
 - `cabins/aspen.html`
@@ -31,32 +41,30 @@ Last updated: 2026-06-07 (Session 4)
 - `cabins/tamarack.html`
 - `cabins/windswept.html`
 
-All cabin pages have a lightbox on the photo gallery (built in shared JS/CSS — no per-page duplication).
+All cabin pages have a lightbox on the photo gallery. Map nav link removed from all cabin pages.
 
 ---
 
-## What Was Fixed This Session
+## Session 5 Changes
 
-### fishing.html
-- Two photos (`IMG_1098.HEIC.jpeg`, `IMG_7509.heic.jpeg`) were HEIC format incorrectly named as .jpeg — confirmed broken in browser, removed. Gallery uses only the 4 confirmed JPEGs: `IMG_7927`, `IMG_7928`, `IMG_7933`, `IMG_8738`.
-- All fishing photo references updated to point directly at `Fishing/` folder (not `images/fishing/`).
-- Hero overlay darkened significantly (`rgba(10,28,38, 0.42–0.96)`) for legible white text.
-- Gallery grid changed from 3-col (6 photos) → 2×2 (4 confirmed photos).
+### map.html
+- Deleted entirely. ResortMap.gif is still in the project root but no longer referenced.
+- All nav links (desktop + mobile) and footer links removed from every page sitewide.
+- Map teaser block (thumbnail + copy) removed from cabins.html.
 
 ### index.html
-- Fishing callout photo updated to `Fishing/IMG_7927.jpeg`.
-- Gallery strip replaced: fixed 5-photo grid → horizontal scroll showing all 10 outdoor photos. Drag-to-scroll added.
+- Hero overlay darkened: gradient now 0.45–0.90 (was 0.18–0.82) for legible white text on hero photo.
+- Gallery strip: duplicate photos removed (outdoor-6 through outdoor-10 were identical to lake-1 through lake-5). Now shows 5 unique photos ordered: Store, Volleyball Court, Beach, Boathouse, IMG_3743.
+- History teaser section removed entirely (blockquote, text, and "Read Full History" button).
 
-### about.html
-- Hero replaced with a clean contact info block: resort name, phone (tel: link), email, address.
-- History trimmed to one paragraph covering only: Goodwill's origin, Isaac Goodwill, wealthy guests by steamboat, Sunday dinner for 100. Gray mare sentence removed. All Ludlow family content, timeline, and sidebar removed.
-- Historical photos reduced from 8 → 3 (corrected broken filename `.233612` → `.233562`).
+### contact.html
+- "Reservations & Inquiries" eyebrow line removed.
+- "No online booking." removed from hero subtext and info card note.
 
-### cabins.html
-- Removed "Small", "Medium", "Large" group heading labels. Cabins flow in grouped order without size category text.
-
-### All cabin pages
-- Lightbox added to photo galleries via shared `css/style.css` and `js/main.js`. Click hero or any thumbnail to open full-size overlay. Left/right arrows, Escape key, and backdrop click all close/navigate.
+### Deployment
+- Git initialized, `.gitignore` created, initial commit made.
+- Pushed to GitHub: https://github.com/saylor3/muskego-point-resort
+- Netlify autodeploy connected: https://muskegopointresort.netlify.app
 
 ---
 
@@ -80,7 +88,7 @@ All cabin pages have a lightbox on the photo gallery (built in shared JS/CSS —
 - `800749477.690463.jpg` ✓ — used on about.html
 - `800749534.529601.jpg` ✓ — used on about.html
 - `800749555.861829.jpg` ✓ — used on about.html
-- `800749622.233562.jpg` ✓ — available (not currently shown — note: earlier sessions had a typo `.233612`, correct name is `.233562`)
+- `800749622.233562.jpg` ✓ — available (not currently shown)
 - `800749654.576066.jpg` ✓ — available
 - `800758523.465317.jpg` ✓ — available
 - `800758610.962293.jpg` ✓ — available
@@ -110,22 +118,22 @@ All cabin pages have a lightbox on the photo gallery (built in shared JS/CSS —
 
 - `images/cabins/[cabin-name]/` — numbered photos (1.jpeg, 2.jpeg, etc.) used on individual cabin pages
 - `images/cabins/[cabin-name].jpeg` — cover thumbnail used in grids on index.html and cabins.html
-- `images/outdoor/` — lake-1.jpeg through lake-5.jpeg + outdoor-6 through outdoor-10.jpeg (copied from `Outdoor and Lake/fwdoutsidepics (1)/`)
-- `images/fishing/` — old copies (fish-1.jpg–fish-4.jpg); superseded by direct `Fishing/` references
+- `images/outdoor/` — lake-1.jpeg through lake-5.jpeg only (outdoor-6 through outdoor-10 are duplicates — no longer used in gallery)
+- `images/fishing/` — old copies; superseded by direct `Fishing/` references
 - `Fishing/` — source fishing photos; use only the 4 confirmed JPEGs listed above
 - `Historical/` — 8 historical photos; 3 currently shown on about.html
-- `ResortMap.gif` — resort map used on map.html
+- `ResortMap.gif` — still in project root but no longer used (map page deleted)
 
 ---
 
 ## Known Remaining Items
 
-- **Map hotspot positions** — currently set by approximate percentage coordinates from visual inspection of ResortMap.gif. Should be verified against the live page and fine-tuned if any dots are off-target.
-- **More cabin history** — CLAUDE.md notes that Mark, Martha, and Judy will provide cabin-specific history. When received, add to about.html.
+- **More cabin history** — Mark, Martha, and Judy may provide cabin-specific history. When received, add to about.html.
 - **Email address** — currently `muskegopoint@gmail.com` everywhere. Will become `info@muskegopoint.com` — update sitewide when confirmed.
-- **Domain** — target is `muskegopoint.com`; currently on localhost. Push to GitHub → Vercel when client approves.
-- **Owner names** — CLAUDE.md says do not publish until confirmed. Not shown anywhere currently.
-- **No Windswept cabin photo subfolder found** in `images/cabins/` — windswept.html uses a 3-photo gallery from `images/cabins/windswept/`. Verify those photos exist.
+- **Custom domain** — point muskegopoint.com to Netlify when ready (add domain in Netlify dashboard, update DNS at registrar).
+- **Owner names** — do not publish until confirmed by owners. Not shown anywhere currently.
+- **Windswept cabin photos** — windswept.html references `images/cabins/windswept/` subfolder. Verify those photos exist and loaded correctly.
+- **Netlify deploy token** — stored in Netlify dashboard. Future pushes to GitHub `main` autodeploy; no manual action needed.
 
 ---
 
