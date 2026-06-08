@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node screenshot.mjs http://localhost:3000/map.html)",
+      "Bash(node screenshot.mjs http://localhost:3000/about.html)",
+      "Bash(node screenshot.mjs http://localhost:3000/contact.html)",
+      "Bash(rm -f \"temporary screenshots\"/*.png)",
+      "Bash(node screenshot.mjs http://localhost:3000/index.html)",
+      "Bash('.gallery-strip')",
+      "Bash(node -e ' *)",
+      "Bash(cd \"/Users/saylorkragness/Desktop/NEW Muskego\" && rm -f \"temporary screenshots\"/*.png && node screenshot.mjs http://localhost:3000/fishing.html)",
+      "Bash(file \"/Users/saylorkragness/Desktop/NEW Muskego/Historical/\"*)",
+      "Bash(cd \"/Users/saylorkragness/Desktop/NEW Muskego\" && rm -f \"temporary screenshots\"/*.png && node screenshot.mjs http://localhost:3000/about.html)",
+      "Bash(cd \"/Users/saylorkragness/Desktop/NEW Muskego\" && rm -f \"temporary screenshots\"/*.png && node screenshot.mjs http://localhost:3000/cabins.html)",
+      "Bash(node screenshot.mjs http://localhost:3000/cabins/tamarack.html)"
+    ],
+    "additionalDirectories": [
+      "/Users/saylorkragness/Desktop/NEW Muskego/temporary screenshots"
+    ]
+  }
+}

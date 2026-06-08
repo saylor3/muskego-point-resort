@@ -1,0 +1,16 @@
+LOGO — SOURCE & STATUS
+======================
+
+The Muskego Point logo Steve sent is a BLACK pine-tree wordmark (PNG).
+Filename: Muskego-Point-logo.jpeg.png  (~159 KB)
+Owners confirmed: keep this logo; there is NO color or digitized version.
+
+Where to get the file (it could not be auto-copied this session — the
+sandbox couldn't read binary files off the mounted drive):
+  1. Gmail: thread "Fwd: website" from stevewheat13@gmail.com (May 28 2026)
+     — the logo is the attachment "Muskego-Point-logo.jpeg.png".
+  2. A copy already lives in the related project folder:
+     Documents/Claude/Projects/Muskego Point Resort/brand_assets/logo/
+
+TO DO: drag that PNG into this folder, then delete the empty 0-byte
+"Muskego-Point-logo.png" placeholder if one is present.

@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Muskego Point Resort — Lake Vermilion, Minnesota</title>
+  <meta name="description" content="Family cabin resort on Lake Vermilion in Tower, Minnesota. Weekly rentals, world-class fishing, and 100 years of northwoods tradition. Call 218-666-5696.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            forest: '#2F4A3C',
+            pine:   '#1E3328',
+            lake:   '#3E6B7A',
+            amber:  '#c8922a',
+            birch:  '#C9B79C',
+            linen:  '#F4F0E8',
+            ink:    '#1A1A1A',
+          },
+          fontFamily: {
+            heading: ['Bitter', 'Georgia', 'serif'],
+            body:    ['DM Sans', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ==============================
+       NAVIGATION
+       ============================== -->
+  <nav class="site-nav" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo" aria-label="Muskego Point Resort — Home">
+          <span class="logo-wordmark" aria-hidden="true">
+            <svg class="logo-tree" viewBox="0 0 20 26" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <polygon points="10,0 3,10 17,10"/>
+              <polygon points="10,6 2,18 18,18"/>
+              <polygon points="10,12 1,26 19,26"/>
+              <rect x="8.5" y="19" width="3" height="7"/>
+            </svg>
+            <span class="logo-text">
+              <span class="logo-name">Muskego Point</span>
+              <span class="logo-sub">Resort</span>
+            </span>
+          </span>
+        </a>
+
+        <ul class="nav-links" role="list">
+          <li><a href="index.html"    class="nav-link">Home</a></li>
+          <li><a href="cabins.html"   class="nav-link">Cabins</a></li>
+          <li><a href="fishing.html"  class="nav-link">Fishing</a></li>
+          <li><a href="about.html"    class="nav-link">About</a></li>
+          <li><a href="contact.html"  class="nav-link">Contact</a></li>
+          <li>
+            <a href="tel:+12186665696" class="nav-link nav-cta">218-666-5696</a>
+          </li>
+        </ul>
+
+        <button class="nav-hamburger" aria-expanded="false" aria-controls="mobile-nav" aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobile-nav" class="nav-mobile" role="list">
+      <a href="index.html"    class="nav-link">Home</a>
+      <a href="cabins.html"   class="nav-link">Cabins</a>
+      <a href="fishing.html"  class="nav-link">Fishing</a>
+      <a href="about.html"    class="nav-link">About</a>
+      <a href="contact.html"  class="nav-link">Contact</a>
+      <a href="tel:+12186665696" class="nav-link" style="color: var(--color-amber); font-weight: 600;">Call 218-666-5696</a>
+    </div>
+  </nav>
+
+
+  <!-- ==============================
+       HERO
+       ============================== -->
+  <section class="hero" aria-label="Hero">
+    <img
+      src="images/outdoor/lake-3.jpeg"
+      alt="Sandy beach and pine trees at Muskego Point Resort on Lake Vermilion"
+      class="hero-img"
+      fetchpriority="high"
+    >
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <p class="hero-eyebrow">Lake Vermilion · Tower, Minnesota</p>
+      <h1 class="hero-title">Muskego<br>Point Resort</h1>
+      <p class="hero-sub">
+        Eleven private cabins on one of Minnesota's finest fishing lakes.
+        Weekly rentals, Saturday to Saturday, May through October.
+      </p>
+      <div class="hero-actions">
+        <a href="tel:+12186665696" class="btn btn-primary">
+          Call to Check Availability
+        </a>
+        <a href="cabins.html" class="btn btn-outline-light">
+          View All Cabins
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==============================
+       VALUE PROPS
+       ============================== -->
+  <section class="value-props section" aria-labelledby="props-heading">
+    <div class="container">
+      <h2 id="props-heading" class="sr-only">Why Muskego Point</h2>
+      <div class="props-grid">
+
+        <div class="prop-card reveal" data-delay="0">
+          <svg class="prop-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9-4.03-9-9-9zm0 0v4m0 10v-2m6-4h-2M8 12H6"/>
+          </svg>
+          <h3 class="prop-title">World-Class Fishing</h3>
+          <p class="prop-text">
+            Lake Vermilion — 40,000 acres and 365 islands — is one of Minnesota's premier muskie and walleye lakes. Muskies up to 55 inches, walleyes past 30.
+          </p>
+        </div>
+
+        <div class="prop-card reveal" data-delay="80">
+          <svg class="prop-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"/>
+          </svg>
+          <h3 class="prop-title">Private & Unhurried</h3>
+          <p class="prop-text">
+            Each cabin has its own dock on the lake. No crowds, no schedule — just pines, water, and the quiet you drove up here to find.
+          </p>
+        </div>
+
+        <div class="prop-card reveal" data-delay="160">
+          <svg class="prop-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+          <h3 class="prop-title">A Century of History</h3>
+          <p class="prop-text">
+            Originally called Goodwill's, the resort has welcomed families to Lake Vermilion for over 100 years. Some things don't change — and shouldn't.
+          </p>
+        </div>
+
+        <div class="prop-card reveal" data-delay="240">
+          <svg class="prop-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+          </svg>
+          <h3 class="prop-title">Built for Families</h3>
+          <p class="prop-text">
+            Cabins sleep 4 to 10 with full kitchens, wood-burning fireplaces, screened porches, and Weber grills. Bring the whole crew.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==============================
+       CABINS GRID
+       ============================== -->
+  <section class="cabins-section section-lg" aria-labelledby="cabins-heading">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">The Cabins</span>
+        <h2 id="cabins-heading">Eleven cabins, one lake</h2>
+        <p>From a cozy two-bedroom for a couple to a five-bedroom cottage for the whole family reunion. Every cabin has a dock, a fireplace, and a lake view.</p>
+      </div>
+
+      <div class="cabin-grid">
+
+        <!-- Aspen -->
+        <article class="cabin-card reveal" data-delay="0">
+          <div class="cabin-card-img-wrap">
+            <img src="images/cabins/aspen.jpeg" alt="Aspen Cabin exterior" loading="lazy">
+            <span class="cabin-card-badge">Sleeps 5</span>
+          </div>
+          <div class="cabin-card-body">
+            <h3 class="cabin-card-name">Aspen Cabin</h3>
+            <p class="cabin-card-meta">2 BR · 1 queen, 1 double, sofa-sleeper · Covered dock</p>
+            <p class="cabin-card-rate">$1,600 / week</p>
+            <a href="cabins/aspen.html" class="cabin-card-link">
+              View Cabin
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Balsam -->
+        <article class="cabin-card reveal" data-delay="60">
+          <div class="cabin-card-img-wrap">
+            <img src="images/cabins/balsam.jpeg" alt="Balsam Cottage exterior" loading="lazy">
+            <span class="cabin-card-badge">Sleeps 10</span>
+          </div>
+          <div class="cabin-card-body">
+            <h3 class="cabin-card-name">Balsam Cottage</h3>
+            <p class="cabin-card-meta">5 BR · 10 singles (can king) · Covered dock</p>
+            <p class="cabin-card-rate">$2,400 / week</p>
+            <a href="cabins/balsam.html" class="cabin-card-link">
+              View Cabin
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Birches -->
+        <article class="cabin-card reveal" data-delay="120">
+          <div class="cabin-card-img-wrap">
+            <img src="images/cabins/birches.jpeg" alt="Birches Cottage exterior" loading="lazy">
+            <span class="cabin-card-badge">Sleeps 4</span>
+          </div>
+          <div class="cabin-card-body">
+            <h3 class="cabin-card-name">Birches Cottage</h3>
+            <p class="cabin-card-meta">2 BR · 1 double, 2 singles · Screened porch</p>
+            <p class="cabin-card-rate">$1,250 / week</p>
+            <a href="cabins/birches.html" class="cabin-card-link">
+              View Cabin
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Cedars -->
+        <article class="cabin-card reveal" data-delay="0">
+          <div class="cabin-card-img-wrap">
+            <img src="images/cabins/cedars.jpeg" alt="Cedars Cabin exterior" loading="lazy">
+            <span class="cabin-card-badge">Sleeps 8</span>
+          </div>
+          <div class="cabin-card-body">
+            <h3 class="cabin-card-name">Cedars Cabin</h3>
+            <p class="cabin-card-meta">4 BR · 2 doubles, 4 singles · Main dock</p>
+            <p class="cabin-card-rate">$1,250 / week</p>
+            <a href="cabins/cedars.html" class="cabin-card-link">
+              View Cabin
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Conifer -->
+        <article class="cabin-card reveal" data-delay="60">
+          <div class="cabin-card-img-wrap">
+            <img src="images/cabins/conifer.jpeg" alt="Conifer Cabin exterior" loading="lazy">
+            <span class="cabin-card-badge">Sleeps 6</span>
+          </div>
+          <div class="cabin-card-body">
+            <h3 class="cabin-card-name">Conifer Cabin</h3>
+            <p class="cabin-card-meta">3 BR · 1 double, 2 singles, bunk · Deck</p>
+            <p class="cabin-card-rate">$1,500 / week</p>
+            <a href="cabins/conifer.html" class="cabin-card-link">
+              View Cabin
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Evergreens -->
+        <article class="cabin-card reveal" data-delay="120">
+          <div class="cabin-card-img-wrap">
+            <img src="images/cabins/evergreens.jpg" alt="Evergreens Cabin exterior" loading="lazy">
+            <span class="cabin-card-badge">Sleeps 6</span>
+          </div>
+          <div class="cabin-card-body">
+            <h3 class="cabin-card-name">Evergreens Cabin</h3>
+            <p class="cabin-card-meta">3 BR · 1 queen, 4 twins · Screened porch</p>
+            <p class="cabin-card-rate">$1,650 / week</p>
+            <a href="cabins/evergreens.html" class="cabin-card-link">
+              View Cabin
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Juniper -->
+        <article class="cabin-card reveal" data-delay="0">
+          <div class="cabin-card-img-wrap">
+            <img src="images/cabins/juniper.jpeg" alt="Juniper Cabin exterior" loading="lazy">
+            <span class="cabin-card-badge">Sleeps 8</span>
+          </div>
+          <div class="cabin-card-body">
+            <h3 class="cabin-card-name">Juniper Cabin</h3>
+            <p class="cabin-card-meta">3 BR · 1 queen, 1 double, 2 singles, bunk · Covered dock</p>
+            <p class="cabin-card-rate">$1,800 / week</p>
+            <a href="cabins/juniper.html" class="cabin-card-link">
+              View Cabin
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Pines -->
+        <article class="cabin-card reveal" data-delay="60">
+          <div class="cabin-card-img-wrap">
+            <img src="images/cabins/pines.jpg" alt="Pines Cottage exterior" loading="lazy">
+            <span class="cabin-card-badge">Sleeps 4</span>
+          </div>
+          <div class="cabin-card-body">
+            <h3 class="cabin-card-name">Pines Cottage</h3>
+            <p class="cabin-card-meta">2 BR · 1 double, 2 singles · Screened porch</p>
+            <p class="cabin-card-rate">$1,250 / week</p>
+            <a href="cabins/pines.html" class="cabin-card-link">
+              View Cabin
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Ponderosa -->
+        <article class="cabin-card reveal" data-delay="120">
+          <div class="cabin-card-img-wrap">
+            <img src="images/cabins/ponderosa.jpg" alt="Ponderosa Cottage exterior" loading="lazy">
+            <span class="cabin-card-badge">Sleeps 10</span>
+          </div>
+          <div class="cabin-card-body">
+            <h3 class="cabin-card-name">Ponderosa Cottage</h3>
+            <p class="cabin-card-meta">5 BR · 10 twin beds, no bunks · Covered dock</p>
+            <p class="cabin-card-rate">$2,400 / week</p>
+            <a href="cabins/ponderosa.html" class="cabin-card-link">
+              View Cabin
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Tamarack -->
+        <article class="cabin-card reveal" data-delay="0">
+          <div class="cabin-card-img-wrap">
+            <img src="images/cabins/tamarack.jpeg" alt="Tamarack Cabin exterior" loading="lazy">
+            <span class="cabin-card-badge">Sleeps 6</span>
+          </div>
+          <div class="cabin-card-body">
+            <h3 class="cabin-card-name">Tamarack Cabin</h3>
+            <p class="cabin-card-meta">3 BR · 6 singles (can king) · 2 baths · Dock</p>
+            <p class="cabin-card-rate">$1,850 / week</p>
+            <a href="cabins/tamarack.html" class="cabin-card-link">
+              View Cabin
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Windswept -->
+        <article class="cabin-card reveal" data-delay="60">
+          <div class="cabin-card-img-wrap">
+            <img src="images/cabins/windswept.jpeg" alt="Windswept Cabin exterior" loading="lazy">
+            <span class="cabin-card-badge">Sleeps 6</span>
+          </div>
+          <div class="cabin-card-body">
+            <h3 class="cabin-card-name">Windswept Cabin</h3>
+            <p class="cabin-card-meta">2 BR · 1 queen, 2 singles, 2 daybeds · Deck</p>
+            <p class="cabin-card-rate">$1,600 / week</p>
+            <a href="cabins/windswept.html" class="cabin-card-link">
+              View Cabin
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </article>
+
+      </div><!-- /.cabin-grid -->
+
+      <!-- See all cabins CTA -->
+      <div class="reveal" style="text-align:center; margin-top:2.5rem;">
+        <a href="cabins.html" class="btn btn-outline-forest">
+          See All Cabin Details & Rates
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==============================
+       FISHING CALLOUT
+       ============================== -->
+  <section class="fishing-callout section" aria-labelledby="fishing-heading">
+    <div class="container">
+      <div class="fishing-inner">
+        <div class="fishing-img-wrap reveal">
+          <img src="Fishing/IMG_7927.jpeg" alt="Fishing on Lake Vermilion" loading="lazy">
+        </div>
+        <div class="fishing-text">
+          <span class="section-label reveal">Lake Vermilion</span>
+          <h2 id="fishing-heading" class="reveal">40,000 acres of world-class fishing</h2>
+          <p class="reveal">
+            365 islands, crystal-clear water, and a reputation that brings anglers back year after year. Muskego Point sits right on the lake — your dock is steps from your front door.
+          </p>
+          <div class="fishing-species reveal">
+            <span class="species-tag">Muskellunge · 55"</span>
+            <span class="species-tag">Walleye · 30"</span>
+            <span class="species-tag">Northern Pike · 20 lb</span>
+            <span class="species-tag">Smallmouth Bass</span>
+            <span class="species-tag">Crappie</span>
+          </div>
+          <div class="reveal">
+            <a href="fishing.html" class="btn btn-outline-light">
+              Fishing on Lake Vermilion
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==============================
+       GALLERY STRIP — horizontal scroll
+       ============================== -->
+  <section class="gallery-strip" aria-label="Resort photo gallery">
+    <div class="gallery-scroll-track">
+      <div class="gallery-scroll-inner">
+        <div class="gallery-item">
+          <img src="images/outdoor/lake-4.jpeg" alt="Resort store on Lake Vermilion" loading="lazy">
+        </div>
+        <div class="gallery-item">
+          <img src="images/outdoor/lake-5.jpeg" alt="Volleyball court at Muskego Point" loading="lazy">
+        </div>
+        <div class="gallery-item">
+          <img src="images/outdoor/lake-3.jpeg" alt="Beach at Muskego Point Resort" loading="lazy">
+        </div>
+        <div class="gallery-item">
+          <img src="images/outdoor/lake-1.jpeg" alt="Boathouse on Lake Vermilion" loading="lazy">
+        </div>
+        <div class="gallery-item">
+          <img src="images/outdoor/lake-2.jpeg" alt="Muskego Point Resort grounds" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==============================
+       FOOTER
+       ============================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-inner">
+
+        <div class="footer-brand">
+          <div class="footer-wordmark">
+            <span class="logo-wordmark">
+              <svg class="logo-tree" viewBox="0 0 20 26" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <polygon points="10,0 3,10 17,10"/>
+                <polygon points="10,6 2,18 18,18"/>
+                <polygon points="10,12 1,26 19,26"/>
+                <rect x="8.5" y="19" width="3" height="7"/>
+              </svg>
+              <span class="logo-text">
+                <span class="logo-name">Muskego Point</span>
+                <span class="logo-sub">Resort</span>
+              </span>
+            </span>
+          </div>
+          <p class="footer-tagline">
+            Family cabin resort on Lake Vermilion.<br>
+            Weekly rentals, May through October.
+          </p>
+        </div>
+
+        <div>
+          <p class="footer-heading">Pages</p>
+          <nav class="footer-nav" aria-label="Footer navigation">
+            <a href="index.html">Home</a>
+            <a href="cabins.html">Cabins</a>
+            <a href="fishing.html">Fishing</a>
+            <a href="map.html">Resort Map</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+          </nav>
+        </div>
+
+        <div>
+          <p class="footer-heading">Get in Touch</p>
+          <div class="footer-contact">
+            <a href="tel:+12186665696" class="footer-phone">218-666-5696</a>
+            <a href="mailto:muskegopoint@gmail.com">muskegopoint@gmail.com</a>
+            <address class="footer-address">
+              8147 Bayview Rd<br>
+              Cook, MN 55723
+            </address>
+            <p style="font-size:0.8125rem; color: rgba(255,255,255,0.45); margin-top:0.25rem; max-width:none;">
+              Bookings by phone only.<br>No online reservations.
+            </p>
+          </div>
+        </div>
+
+      </div><!-- /.footer-inner -->
+
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2025 Muskego Point Resort. All rights reserved.</p>
+        <p class="footer-copy">muskegopoint.com</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
