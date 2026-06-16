@@ -22,7 +22,6 @@ Build each page as a separate HTML file. All pages share the same nav, footer, s
 index.html
 cabins.html
 fishing.html
-map.html
 about.html
 contact.html
 css/style.css
@@ -44,7 +43,7 @@ cabins/
 **Do not build a single index.html with anchor links. Build separate HTML files.**
 
 ## Navigation
-Every page: Home | Cabins | Fishing | Map | About | Contact
+Every page: Home | Cabins | Fishing | About | Contact
 Active page highlighted. Collapses to hamburger on mobile.
 
 ## Brand Colors
@@ -142,6 +141,7 @@ Active page highlighted. Collapses to hamburger on mobile.
 ```
 
 ## Cabin Details (all 11 — use exactly, do not invent)
+Refer to all cabins by first name only — no "Cottage" or "Cabin" suffix on the site.
 
 | Cabin | Sleeps | Bedrooms / Beds | Bath | Dock | Rate/wk |
 |-------|:------:|-----------------|:----:|------|--------:|
@@ -150,7 +150,7 @@ Active page highlighted. Collapses to hamburger on mobile.
 | Birches | 4 | 2 BR (1 double, 2 single) | 1 | Shares dock w/ Pines | $1,250 |
 | Cedars | 8 | 4 BR (2 double, 4 single) | 1 | Uses main dock | $1,250 |
 | Conifer | 6 | 3 BR (1 double, 2 single, 1 single bunk) | 1 | Shares dock w/ Windswept | $1,500 |
-| Evergreens | 6 | 3 BR (1 queen, 4 twins — no bunk) | 1 | Dock | $1,650 |
+| Evergreens | 6 | 3 BR (1 queen, 4 twins) | 1 | Dock | $1,650 |
 | Juniper | 8 | 3 BR (1 queen, 1 double, 2 single, 1 single bunk) | 1 | Covered dock | $1,800 |
 | Pines | 4 | 2 BR (1 double, 2 single) | 1 | Shares dock w/ Birches | $1,250 |
 | Ponderosa | 10 | 5 BR (twins in each room) | 2 | Covered dock | $2,400 |

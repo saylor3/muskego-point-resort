@@ -12,7 +12,14 @@
       "Bash(file \"/Users/saylorkragness/Desktop/NEW Muskego/Historical/\"*)",
       "Bash(cd \"/Users/saylorkragness/Desktop/NEW Muskego\" && rm -f \"temporary screenshots\"/*.png && node screenshot.mjs http://localhost:3000/about.html)",
       "Bash(cd \"/Users/saylorkragness/Desktop/NEW Muskego\" && rm -f \"temporary screenshots\"/*.png && node screenshot.mjs http://localhost:3000/cabins.html)",
-      "Bash(node screenshot.mjs http://localhost:3000/cabins/tamarack.html)"
+      "Bash(node screenshot.mjs http://localhost:3000/cabins/tamarack.html)",
+      "Bash(python3 -)",
+      "Bash(CLAUDE_CODE_TMPDIR=/tmp security find-internet-password -s github.com)",
+      "Bash(git add *)",
+      "Bash(git commit -m 'Remove Cabin/Cottage suffix from all cabin names sitewide *)",
+      "Bash(git commit -m 'Remove Cabin suffix from all 11 cabin pages *)",
+      "Bash(git remote *)",
+      "Bash(git push *)"
     ],
     "additionalDirectories": [
       "/Users/saylorkragness/Desktop/NEW Muskego/temporary screenshots"

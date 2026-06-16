@@ -1,0 +1,7 @@
+# Muskego Point — legacy Weebly URL redirects
+# Old "Sites and Attractions" page → Fishing
+/sites-and-attractions  /fishing.html  301
+
+# Old "The Lake" page → Fishing
+/the-lake               /fishing.html  301
+
