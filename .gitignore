@@ -1,14 +1,14 @@
 node_modules/
 temporary screenshots/
 .DS_Store
-Cabins/
-Historical/
+/Cabins/
+/Historical/
 Outdoor and Lake/
-Fishing/
-Lodge/
+/Fishing/
+/Lodge/
 temporary screenshots/
-Photos/
-Logo/
+/Photos/
+/Logo/
 Client Comms/
 *.docx
 *.tmp
