@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lodge &amp; Store — Muskego Point Resort</title>
+  <meta name="description" content="The Muskego Point lodge houses a full tackle shop, bait, fishing licenses, groceries, gas, and resort merchandise. Right on the property.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            forest: '#2F4A3C', pine: '#1E3328', lake: '#3E6B7A',
+            amber: '#c8922a', birch: '#C9B79C', linen: '#F4F0E8', ink: '#1A1A1A',
+          },
+          fontFamily: { heading: ['Bitter','Georgia','serif'], body: ['DM Sans','system-ui','sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    /* Lodge page hero */
+    .lodge-hero {
+      position: relative;
+      height: 72vh;
+      min-height: 460px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      overflow: hidden;
+    }
+    .lodge-hero-img {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      object-position: center 55%;
+    }
+    .lodge-hero-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(30, 51, 40, 0.32) 0%,
+        rgba(30, 51, 40, 0.50) 40%,
+        rgba(30, 51, 40, 0.88) 78%,
+        rgba(30, 51, 40, 0.97) 100%
+      );
+    }
+    .lodge-hero-content {
+      position: relative; z-index: 1;
+      padding: 0 1.25rem 4rem;
+      max-width: 1200px;
+      margin-inline: auto;
+      width: 100%;
+    }
+    .lodge-eyebrow {
+      font-family: var(--font-body);
+      font-size: 0.6875rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(201, 183, 156, 0.85);
+      margin-bottom: 0.75rem;
+      opacity: 0;
+      transform: translateY(12px);
+      animation: fade-up 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s forwards;
+    }
+    .lodge-hero-title {
+      font-family: var(--font-heading);
+      font-size: clamp(2.25rem, 5.5vw, 3.75rem);
+      font-weight: 700;
+      color: var(--color-white);
+      line-height: 1.1;
+      letter-spacing: -0.025em;
+      margin-bottom: 1.25rem;
+      opacity: 0;
+      transform: translateY(14px);
+      animation: fade-up 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.35s forwards;
+    }
+    .lodge-hero-sub {
+      font-family: var(--font-body);
+      font-size: clamp(1rem, 1.5vw, 1.125rem);
+      color: rgba(255,255,255,0.78);
+      line-height: 1.7;
+      max-width: 52ch;
+      margin-bottom: 2rem;
+      opacity: 0;
+      transform: translateY(12px);
+      animation: fade-up 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s forwards;
+    }
+
+    /* Section layout — alternating photo + text */
+    .lodge-section {
+      padding: 5rem 1.25rem;
+    }
+    .lodge-section:nth-child(even) {
+      background: var(--color-white);
+    }
+    .lodge-section:nth-child(odd) {
+      background: var(--color-linen);
+    }
+    .lodge-section-inner {
+      max-width: 1100px;
+      margin-inline: auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+    .lodge-section-inner.reverse {
+      direction: rtl;
+    }
+    .lodge-section-inner.reverse > * {
+      direction: ltr;
+    }
+    @media (max-width: 767px) {
+      .lodge-section { padding: 3.5rem 1.25rem; }
+      .lodge-section-inner,
+      .lodge-section-inner.reverse { grid-template-columns: 1fr; direction: ltr; gap: 2.5rem; }
+    }
+    .lodge-section-img {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-raised);
+      aspect-ratio: 4 / 3;
+    }
+    .lodge-section-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .lodge-section-body {}
+    .lodge-section-number {
+      font-family: var(--font-body);
+      font-size: 0.6875rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--color-amber);
+      margin-bottom: 0.75rem;
+    }
+    .lodge-section-title {
+      font-family: var(--font-heading);
+      font-size: clamp(1.625rem, 3vw, 2.25rem);
+      font-weight: 700;
+      color: var(--color-pine);
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      margin-bottom: 1.25rem;
+    }
+    .lodge-section-text {
+      font-family: var(--font-body);
+      font-size: 1.0625rem;
+      color: #4a4a4a;
+      line-height: 1.75;
+      margin-bottom: 1.25rem;
+    }
+    .lodge-items {
+      list-style: none;
+      padding: 0;
+      margin: 1.25rem 0 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.5rem 1.5rem;
+    }
+    .lodge-items li {
+      font-family: var(--font-body);
+      font-size: 0.9375rem;
+      color: #4a4a4a;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+    .lodge-items li::before {
+      content: '';
+      display: block;
+      flex-shrink: 0;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--color-forest);
+      margin-top: 0.55rem;
+    }
+    @media (max-width: 479px) {
+      .lodge-items { grid-template-columns: 1fr; }
+    }
+
+    /* CTA section */
+    .lodge-cta-section {
+      background: var(--color-pine);
+      padding: 5rem 1.25rem;
+      text-align: center;
+    }
+
+    /* Paired image layout — two images stacked in one grid cell */
+    .lodge-section-img-pair {
+      display: flex;
+      flex-direction: column;
+      gap: 0.875rem;
+    }
+    .lodge-section-img-pair .lodge-section-img { aspect-ratio: 4 / 3; }
+    .lodge-section-img-pair .lodge-section-img.lodge-img-secondary { aspect-ratio: 16 / 9; }
+
+    @keyframes fade-up {
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="site-nav" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo" aria-label="Muskego Point Resort — Home">
+          <span class="logo-wordmark" aria-hidden="true">
+            <svg class="logo-tree" viewBox="0 0 30 26" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><g opacity="0.7"><polygon points="7,7 4,13 10,13"/><polygon points="7,10 3,18 11,18"/><polygon points="7,14 2,23 12,23"/><rect x="6.2" y="21" width="1.6" height="5"/></g><g opacity="0.7"><polygon points="23,7 20,13 26,13"/><polygon points="23,10 19,18 27,18"/><polygon points="23,14 18,23 28,23"/><rect x="22.2" y="21" width="1.6" height="5"/></g><polygon points="15,0 10.5,9 19.5,9"/><polygon points="15,5 9,15 21,15"/><polygon points="15,10 7,22 23,22"/><rect x="14" y="20" width="2" height="5"/></svg>
+            <span class="logo-text">
+              <span class="logo-name">Muskego Point</span>
+              <span class="logo-sub">Resort</span>
+            </span>
+          </span>
+        </a>
+        <ul class="nav-links" role="list">
+          <li><a href="index.html"    class="nav-link">Home</a></li>
+          <li><a href="cabins.html"   class="nav-link">Cabins</a></li>
+          <li><a href="lodge.html"    class="nav-link active">Lodge</a></li>
+          <li><a href="fishing.html"  class="nav-link">Fishing</a></li>
+          <li><a href="about.html"    class="nav-link">About</a></li>
+          <li><a href="contact.html"  class="nav-link">Contact</a></li>
+          <li><a href="tel:+12186665696" class="nav-link nav-cta">218-666-5696</a></li>
+        </ul>
+        <button class="nav-hamburger" aria-expanded="false" aria-controls="mobile-nav" aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-nav" class="nav-mobile" role="list">
+      <a href="index.html"    class="nav-link">Home</a>
+      <a href="cabins.html"   class="nav-link">Cabins</a>
+      <a href="lodge.html"    class="nav-link active">Lodge</a>
+      <a href="fishing.html"  class="nav-link">Fishing</a>
+      <a href="about.html"    class="nav-link">About</a>
+      <a href="contact.html"  class="nav-link">Contact</a>
+      <a href="tel:+12186665696" class="nav-link" style="color: var(--color-amber); font-weight: 600;">Call 218-666-5696</a>
+    </div>
+  </nav>
+
+
+  <!-- HERO -->
+  <section class="lodge-hero" aria-label="Muskego Point lodge and store">
+    <img
+      src="images/lodge/2.jpeg"
+      alt="Muskego Point Resort on Lake Vermilion"
+      class="lodge-hero-img"
+      fetchpriority="high"
+    >
+    <div class="lodge-hero-overlay"></div>
+    <div class="lodge-hero-content">
+      <p class="lodge-eyebrow">On the Property</p>
+      <h1 class="lodge-hero-title">Lodge, store,<br>and tackle shop.</h1>
+      <p class="lodge-hero-sub">
+        Bait, licenses, fishing gear, groceries, and gas, all on the property. Wi-Fi at the lodge.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- STORE SECTION -->
+  <section class="lodge-section" aria-labelledby="store-heading">
+    <div class="lodge-section-inner">
+      <div class="lodge-section-img-pair">
+        <div class="lodge-section-img reveal">
+          <img src="images/outdoor/lake-7.jpeg" alt="Muskego Point resort store" loading="lazy">
+        </div>
+        <div class="lodge-section-img lodge-img-secondary reveal">
+          <img src="images/outdoor/lake-8.jpeg" alt="Volleyball court at Muskego Point" loading="lazy">
+        </div>
+      </div>
+      <div class="lodge-section-body">
+        <p class="lodge-section-number">01 - Store</p>
+        <h2 id="store-heading" class="lodge-section-title reveal">Resort store,<br>on site</h2>
+        <p class="lodge-section-text reveal">
+          The lodge store carries snacks, ice, lake supplies, and everyday necessities. It's the center of the resort: stop in for the Wi-Fi password, or to ask about the lake, the fishing, or the area.
+        </p>
+        <ul class="lodge-items reveal">
+          <li>Groceries &amp; snacks</li>
+          <li>Ice</li>
+          <li>Lake supplies</li>
+          <li>Refreshments</li>
+          <li>Gas &amp; oil</li>
+          <li>Laundry</li>
+          <li>Wi-Fi available here</li>
+          <li>Maps &amp; local info</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- BAIT & TACKLE SECTION -->
+  <section class="lodge-section" aria-labelledby="tackle-heading">
+    <div class="lodge-section-inner reverse">
+      <div class="lodge-section-img reveal">
+        <img src="images/outdoor/lake-6.jpeg" alt="Covered boathouse and dock at Muskego Point" loading="lazy">
+      </div>
+      <div class="lodge-section-body">
+        <p class="lodge-section-number">02 - Bait &amp; Tackle</p>
+        <h2 id="tackle-heading" class="lodge-section-title reveal">Bait &amp; Tackle<br>on site</h2>
+        <p class="lodge-section-text reveal">
+          The tackle shop stocks lures, live bait, line, and terminal tackle for every species on Lake Vermilion, including the heavier gear muskie fishing calls for. Fishing licenses are available here.
+        </p>
+        <ul class="lodge-items reveal">
+          <li>Muskie lures</li>
+          <li>Rapala lures</li>
+          <li>Custom spinnerbaits</li>
+          <li>Soft plastics &amp; jigs</li>
+          <li>Topwater lures</li>
+          <li>Leaders, sinkers, hooks</li>
+          <li>Mono &amp; superline</li>
+          <li>Rods &amp; reels</li>
+          <li>Nets &amp; tackle boxes</li>
+          <li>Live bait</li>
+          <li>Fishing licenses</li>
+          <li>Guide service arranged</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- BOAT RENTALS SECTION -->
+  <section class="lodge-section" aria-labelledby="boat-heading">
+    <div class="lodge-section-inner">
+      <div class="lodge-section-img reveal">
+        <img src="images/lodge/6.jpeg" alt="Rental boat at Muskego Point Resort" loading="lazy">
+      </div>
+      <div class="lodge-section-body">
+        <p class="lodge-section-number">03 - Boat Rentals</p>
+        <h2 id="boat-heading" class="lodge-section-title reveal">Boats and dock slips<br>on site</h2>
+        <p class="lodge-section-text reveal">
+          The resort has aluminum fishing boats and motors available for rent by the day or week. Bring your own boat and keep it in a covered slip right on the dock. Ask when you call for current availability and rates.
+        </p>
+        <a href="fishing.html" class="reveal" style="display:inline-flex; align-items:center; gap:0.4rem; font-family:var(--font-body); font-size:0.9375rem; font-weight:600; color:var(--color-forest); text-decoration:none; margin-top:1.25rem;">
+          See rental rates on the fishing page
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- MERCHANDISE SECTION -->
+  <section class="lodge-section" aria-labelledby="merch-heading">
+    <div class="lodge-section-inner reverse">
+      <div class="lodge-section-img reveal">
+        <img src="images/lodge/5.jpeg" alt="Muskego Point resort merchandise" loading="lazy">
+      </div>
+      <div class="lodge-section-body">
+        <p class="lodge-section-number">04 - Merchandise</p>
+        <h2 id="merch-heading" class="lodge-section-title reveal">Take a piece<br>of the lake home</h2>
+        <p class="lodge-section-text reveal">
+          We carry a selection of Muskego Point-branded gear and Lake Vermilion souvenirs: shirts, hats, and gifts worth bringing back.
+        </p>
+        <a href="tel:+12186665696" class="call-btn reveal" style="display:inline-flex; margin-top:1.5rem;">
+          <span class="mobile-label">Call for Hours</span>
+          <span class="desktop-label">Call 218-666-5696</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- CTA -->
+  <section class="lodge-cta-section" aria-labelledby="lodge-cta-heading">
+    <div class="container">
+      <div style="max-width: 600px; margin-inline: auto;">
+        <span class="section-label reveal" style="color: rgba(201,183,156,0.8);">Plan Your Stay</span>
+        <h2 id="lodge-cta-heading" class="reveal" style="font-size: clamp(1.75rem, 3.5vw, 2.75rem); color: var(--color-white); letter-spacing: -0.025em; margin-bottom: 1rem;">
+          Ready to book a week on Lake Vermilion?
+        </h2>
+        <p class="reveal" style="font-size: 1.0625rem; color: rgba(255,255,255,0.7); line-height: 1.7; margin-bottom: 2rem;">
+          Weekly rentals run Saturday to Saturday, May through October. All reservations by phone. Call early; summer weeks fill fast.
+        </p>
+        <a href="tel:+12186665696" class="btn btn-primary reveal" style="font-size: 1.0625rem; padding: 0.9rem 2.25rem;">
+          Call 218-666-5696
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-inner">
+
+        <div class="footer-brand">
+          <div class="footer-wordmark">
+            <span class="logo-wordmark">
+              <svg class="logo-tree" viewBox="0 0 30 26" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><g opacity="0.7"><polygon points="7,7 4,13 10,13"/><polygon points="7,10 3,18 11,18"/><polygon points="7,14 2,23 12,23"/><rect x="6.2" y="21" width="1.6" height="5"/></g><g opacity="0.7"><polygon points="23,7 20,13 26,13"/><polygon points="23,10 19,18 27,18"/><polygon points="23,14 18,23 28,23"/><rect x="22.2" y="21" width="1.6" height="5"/></g><polygon points="15,0 10.5,9 19.5,9"/><polygon points="15,5 9,15 21,15"/><polygon points="15,10 7,22 23,22"/><rect x="14" y="20" width="2" height="5"/></svg>
+              <span class="logo-text">
+                <span class="logo-name">Muskego Point</span>
+                <span class="logo-sub">Resort</span>
+              </span>
+            </span>
+          </div>
+          <p class="footer-tagline">Family cabin resort on Lake Vermilion.<br>Weekly rentals, May through October.</p><div class="footer-social"><a href="https://www.instagram.com/muskegopoint/?hl=en" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Muskego Point on Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a><a href="https://www.facebook.com/MuskegoPointResort" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Muskego Point on Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a></div>
+        </div>
+
+        <div>
+          <p class="footer-heading">Pages</p>
+          <nav class="footer-nav" aria-label="Footer navigation">
+            <a href="index.html">Home</a>
+            <a href="cabins.html">Cabins</a>
+            <a href="lodge.html">Lodge</a>
+            <a href="fishing.html">Fishing</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+          </nav>
+        </div>
+
+        <div>
+          <p class="footer-heading">Get in Touch</p>
+          <div class="footer-contact">
+            <a href="tel:+12186665696" class="footer-phone">218-666-5696</a>
+            <a href="mailto:muskegopoint@gmail.com">muskegopoint@gmail.com</a>
+            <address class="footer-address">
+              8147 Bayview Rd<br>
+              Cook, MN 55723
+            </address>
+            <p style="font-size:0.8125rem; color: rgba(255,255,255,0.45); margin-top:0.25rem;">
+              Bookings by phone only.
+            </p>
+          </div>
+        </div>
+
+      </div><!-- /.footer-inner -->
+
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2026 Muskego Point Resort. All rights reserved.</p>
+        <p class="footer-copy">muskegopoint.com</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

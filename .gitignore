@@ -1,3 +1,15 @@
 node_modules/
 temporary screenshots/
 .DS_Store
+Cabins/
+Historical/
+Outdoor and Lake/
+Fishing/
+Lodge/
+temporary screenshots/
+Photos/
+Logo/
+Client Comms/
+*.docx
+*.tmp
+muskego-image-prep.sh

@@ -1,0 +1,25 @@
+# Netlify cache-control headers.
+/*.jpg
+  Cache-Control: public, max-age=604800
+/*.jpeg
+  Cache-Control: public, max-age=604800
+/*.png
+  Cache-Control: public, max-age=604800
+/*.gif
+  Cache-Control: public, max-age=604800
+/*.webp
+  Cache-Control: public, max-age=604800
+/*.svg
+  Cache-Control: public, max-age=604800
+/*.css
+  Cache-Control: public, max-age=86400
+/*.js
+  Cache-Control: public, max-age=86400
+/*.woff2
+  Cache-Control: public, max-age=2592000
+/*.woff
+  Cache-Control: public, max-age=2592000
+/*.ttf
+  Cache-Control: public, max-age=2592000
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
